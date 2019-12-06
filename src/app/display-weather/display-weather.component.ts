@@ -12,7 +12,7 @@ export class DisplayWeatherComponent implements OnInit {
 
   searchWeather() {
     this.weatherService.getWeather().subscribe(data => {
-      this.weather = data.weather;
+      this.weather = data.main.temp;
       console.log(this.weather);
     });
   }

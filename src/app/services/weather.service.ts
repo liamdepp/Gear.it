@@ -14,7 +14,8 @@ export class WeatherService {
     return this.http.get("http://api.openweathermap.org/data/2.5/weather/", {
       params: {
         appid: API_KEY,
-        q: q
+        q: q,
+        units: "imperial"
       }
     });
   }
