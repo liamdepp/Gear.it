@@ -1,0 +1,53 @@
+.navigation {
+  border-bottom: 1px solid black;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  padding-left: 16px;
+}
+
+.links a {
+  color: #18331d;
+}
+
+.links:visited a {
+  color: #18331d;
+}
+  
+.links a:hover {
+  color: #58a462;
+  transition: .3s;
+}
+
+main {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero_image {
+  height: auto;
+  width: 100%;
+}
+
+.call-to-action {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32pt;
+}
+
+.find-gear {
+  padding: 8px;
+  border: 1px solid white;
+  color: white;
+}
