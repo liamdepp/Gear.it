@@ -10,13 +10,13 @@ export class DisplayWeatherComponent implements OnInit {
   weather: any[];
   constructor(private weatherService: WeatherService) {}
 
-  searchGenre() {
+  searchWeather() {
     this.weatherService.getWeather().subscribe(data => {
-      this.genres = data.genres;
+      this.weather = data.genres;
     });
   }
 
   ngOnInit() {
-    this.getWeather();
+    this.searchWeather();
   }
 }
