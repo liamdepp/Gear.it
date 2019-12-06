@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { DisplayWeatherComponent } from './display-weather/display-weather.component';
 import { HttpClientModule } from "@angular/common/http";
 import { PackingListComponent } from './packing-list/packing-list.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayWeatherComponent,
-    PackingListComponent
+    PackingListComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
