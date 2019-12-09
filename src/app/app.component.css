@@ -1,28 +1,33 @@
 .navigation {
-  border-bottom: 1px solid black;
-  padding: 16px;
   display: flex;
+  position: absolute;
+  margin-left: 1.5%;
+  margin-right: 1%;
   justify-content: space-between;
+  width: 97.15%;
+  padding-top: 10px;
 }
 
 a {
   text-decoration: none;
   padding-left: 16px;
+  font-family: "Bebas Neue", sans-serif;
 }
-
 .links a {
-  color: #18331d;
+  color: #58a462;
+  font-size: 16px;
 }
 
 .links:visited a {
   color: #18331d;
 }
-  
+
 .links a:hover {
-  color: #58a462;
-  transition: .3s;
+  color: white;
+  transition: 0.3s;
 }
 
 .logo {
   cursor: pointer;
+  color: white;
 }

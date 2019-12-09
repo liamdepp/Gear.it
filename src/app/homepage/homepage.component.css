@@ -1,7 +1,9 @@
 main {
   position: relative;
+  top: 0px;
   text-align: center;
   color: white;
+  z-index: -1;
 }
 
 .hero_image {
@@ -17,12 +19,40 @@ main {
 }
 
 h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 32pt;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40pt;
 }
 
 .find-gear {
   padding: 8px;
-  border: 1px solid white;
+  border: 3px solid white;
+  border-radius: 5px;
   color: white;
+}
+
+article h1 {
+  color: #18331d;
+  text-align: center;
+  font-size: 36px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-family: "Bebas Neue", sans-serif;
+  text-decoration: solid #5a8462 underline;
+}
+
+.omsText {
+  color: #18331d;
+  /* border: 1px solid black; */
+  display: flex;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.omsText p {
+  margin-right: 2px;
+  text-align: justify;
+}
+
+.omsImage img {
+  width: 100%;
 }
