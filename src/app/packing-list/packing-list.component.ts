@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { PackingList } from "../interfaces/packing-list";
 import { isNgTemplate } from "@angular/compiler";
 
+import { Router } from "@angular/router";
+
 @Component({
   selector: "app-packing-list",
   templateUrl: "./packing-list.component.html",
@@ -16,6 +18,7 @@ export class PackingListComponent implements OnInit {
 
   newItem: PackingList = { item: "", complete: false };
   newItemText: string = "";
+  constructor(private router: Router) {}
 
   addItem() {
     this.listItems = [
@@ -31,8 +34,6 @@ export class PackingListComponent implements OnInit {
   delete(item: PackingList): void {
     this.listItems = this.listItems.filter(x => x !== item);
   }
-
-  constructor() {}
 
   ngOnInit() {}
 }
