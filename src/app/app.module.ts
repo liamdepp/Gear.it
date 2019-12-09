@@ -8,6 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { PackingListComponent } from './packing-list/packing-list.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { GearFormComponent } from './gear-form/gear-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     DisplayWeatherComponent,
     PackingListComponent,
     HomepageComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    GearFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+.navigation {
+  border-bottom: 1px solid black;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  padding-left: 16px;
+}
+
+.links a {
+  color: #18331d;
+}
+
+.links:visited a {
+  color: #18331d;
+}
+  
+.links a:hover {
+  color: #58a462;
+  transition: .3s;
+}
+
+.logo {
+  cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AboutUs } from '../interfaces/about-us';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about-us',
@@ -31,7 +32,7 @@ export class AboutUsComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
