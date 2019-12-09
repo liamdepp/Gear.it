@@ -1,1 +1,59 @@
-<p>packing-list works!</p>
+<html>
+  <header>
+    <nav class="navigation">
+      <div class="logo">Logo</div>
+      <div class="links">
+        <a href="">Find Gear</a>
+        <a href="">Packing List</a>
+        <a href="">About Us</a>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <div class="listArea">
+      <div class="lines"></div>
+
+      <h1>My Packing List</h1>
+      <ul class="list">
+        <li *ngFor="let item of listItems">
+          <button
+            class="box"
+            *ngIf="!item.complete"
+            (click)="completeItem(item)"
+          >
+            <i class="material-icons">
+              check_box_outline_blank
+            </i>
+          </button>
+          <span [ngClass]="{ completeItem: item.complete }">{{
+            item.item
+          }}</span>
+          <button class="check" *ngIf="item.complete">
+            <i class="material-icons">
+              check_box
+            </i>
+          </button>
+          <button class="delete" (click)="delete(item)">
+            <i class="material-icons">
+              delete
+            </i>
+          </button>
+        </li>
+      </ul>
+      <form (ngSubmit)="addItem()">
+        <input
+          type="text"
+          name="add"
+          placeholder="Add an item"
+          [(ngModel)]="newItemText"
+          required
+        />
+        <button type="submit">
+          <i class="material-icons" style="font-size: 35px">
+            add_box
+          </i>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
