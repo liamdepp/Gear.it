@@ -5,6 +5,7 @@
 
       <h1>My Packing List</h1>
       <ul class="list">
+        <p *ngIf="listItems.length === 0">Your list is empty!</p>
         <li *ngFor="let item of listItems">
           <button
             class="box"
@@ -38,7 +39,7 @@
           [(ngModel)]="newItemText"
           required
         />
-        <button type="submit">
+        <button class="add" type="submit" [disabled]="newItemText.length === 0">
           <i class="material-icons" style="font-size: 35px">
             add_box
           </i>
