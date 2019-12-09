@@ -2,7 +2,7 @@
 
 h1 {
   font-family: "Permanent Marker";
-  margin-left: 8px;
+  margin: 8px;
 }
 
 .listArea {
@@ -49,20 +49,29 @@ li {
   border: none;
   background-color: #f0e0bf;
   color: #5a8462;
-  vertical-align: top;
   float: right;
+}
+
+.addButton {
+  position: relative;
+  bottom: 2px;
 }
 
 .add:hover {
   color: rgb(90, 90, 90);
 }
 
+form {
+  display: inline-flex;
+  width: 100%;
+}
+
 input {
   padding: 8px;
   border: none;
   border-radius: 5px;
-  width: 65%;
-  margin-left: 10px;
+  width: 100%;
+  margin-left: 55px;
   margin-bottom: 10px;
 }
 

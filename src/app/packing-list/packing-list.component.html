@@ -1,8 +1,7 @@
 <html>
   <body>
+    <div class="lines"></div>
     <div class="listArea">
-      <div class="lines"></div>
-
       <h1>My Packing List</h1>
       <ul class="list">
         <p *ngIf="listItems.length === 0">Your list is empty!</p>
@@ -39,11 +38,17 @@
           [(ngModel)]="newItemText"
           required
         />
-        <button class="add" type="submit" [disabled]="newItemText.length === 0">
-          <i class="material-icons" style="font-size: 35px">
-            add_box
-          </i>
-        </button>
+        <div class="addButton">
+          <button
+            class="add"
+            type="submit"
+            [disabled]="newItemText.length === 0"
+          >
+            <i class="material-icons" style="font-size: 35px">
+              add_box
+            </i>
+          </button>
+        </div>
       </form>
     </div>
   </body>
