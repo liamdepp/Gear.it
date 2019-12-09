@@ -1,6 +1,6 @@
 .navigation {
   display: flex;
-  position: absolute;
+  position: fixed;
   margin-left: 1.5%;
   margin-right: 1%;
   justify-content: space-between;
@@ -10,12 +10,12 @@
 
 a {
   text-decoration: none;
-  padding-left: 16px;
+  padding-left: 28px;
   font-family: "Bebas Neue", sans-serif;
 }
 .links a {
-  color: #58a462;
-  font-size: 16px;
+  color: white;
+  font-size: 20px;
 }
 
 .links:visited a {
@@ -23,7 +23,7 @@ a {
 }
 
 .links a:hover {
-  color: white;
+  color: #58a462;
   transition: 0.3s;
 }
 
