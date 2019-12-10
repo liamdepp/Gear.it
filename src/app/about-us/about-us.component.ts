@@ -11,23 +11,24 @@ export class AboutUsComponent implements OnInit {
   profiles: AboutUs[] = [
     {
       name: "Alicia",
-      linkedIn: "",
-      about: ""
+      linkedIn: "linkedin.com/in/alicia--martin/",
+      about:
+        "Alicia is a front-end developer with a background in biomedical science."
     },
     {
       name: "Christian",
-      linkedIn: "",
-      about: ""
+      linkedIn: "qqqqqqqq",
+      about: "wwwwwwwwwww"
     },
     {
       name: "Liam",
-      linkedIn: "",
-      about: ""
+      linkedIn: "aaaaaaaaaaaaa",
+      about: "zzzzzzzzzzzzz"
     },
     {
       name: "Rion",
-      linkedIn: "https://linkedin.com/in/rionnunez",
-      about: "Rion is a front-end developer and designer "
+      linkedIn: "rrrrrrrrrrrrrr",
+      about: "ooooooooooooo"
     }
   ];
 

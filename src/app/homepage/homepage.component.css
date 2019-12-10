@@ -34,7 +34,9 @@ h1 {
   background-color: #ff6800;
   color: white;
   cursor: pointer;
+  z-index: 0;
 }
+
 .overlay {
   position: relative;
   z-index: 999;
@@ -42,11 +44,26 @@ h1 {
 }
 article {
   z-index: 300;
+  padding-top: 10px;
 }
 .omsImage img {
   width: 100%;
 }
 
+.omsText {
+  text-align: center;
+  color: rgba(24, 51, 29, 0.8);
+}
+
 .omsText p {
-  margin-top: 0;
+  background-color: white;
+}
+
+.omsBorder {
+  border-top: 1px solid #ff6800;
+  width: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
