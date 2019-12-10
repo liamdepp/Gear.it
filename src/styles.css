@@ -13,3 +13,9 @@ html {
 a {
   text-decoration: none;
 }
+
+.panel {
+  background: url("https://media.milanote.com/p/images/1IDfhv1imP6P4P/0C3/bonfire-2108709.jpg");
+  background-size: cover;
+  height: 100vh;
+}

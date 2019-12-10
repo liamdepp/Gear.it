@@ -1,0 +1,83 @@
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+form{
+  width: 50%;
+  padding: 50px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(177,178,181,0.6);
+  color: #F4FFF7;
+  justify-content: center;
+  margin-top: 15%;
+  border-radius: 5px;
+}
+
+input {
+  min-width: 200px;
+  width: 100%;
+  text-align: center;
+  background-color: #F4FFF7;
+  padding: 10px;
+  border: 1px solid #B1B2B5;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+input::placeholder {
+  color: black;
+}
+
+.select-container {
+  width: 100%;
+}
+
+.selectdiv {
+  position: relative;
+  /*Don't really need this just for demo styling*/
+  /* float: left; */
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 200px;
+}
+
+.selectdiv:after {
+  font-family: "Material Icons";
+  content: "code";
+  font: 17px;
+  color: #5A8462;
+  transform: rotate(90deg);
+  right: 11px;
+  /*Adjust for position however you want*/
+  top: 18px;
+  padding: 0 0 2px;
+  border-bottom: 1px solid #5A8462;  
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectdiv select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 50px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: black;
+  background-color: #f4FFF7;
+  border: 1px solid #cccccc;
+  word-break: normal;
+}
