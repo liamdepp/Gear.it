@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { GearPost } from "../interfaces/gear-post";
 
 @Component({
   selector: "app-gear-form",

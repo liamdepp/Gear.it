@@ -1,40 +1,38 @@
-import { Component, OnInit } from '@angular/core';
-import { AboutUs } from '../interfaces/about-us';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { AboutUs } from "../interfaces/about-us";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-about-us',
-  templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.css']
+  selector: "app-about-us",
+  templateUrl: "./about-us.component.html",
+  styleUrls: ["./about-us.component.css"]
 })
 export class AboutUsComponent implements OnInit {
-
   profiles: AboutUs[] = [
     {
       name: "Alicia",
-      linkedIn: "",
-      about: "",
+      linkedIn: "linkedin.com/in/alicia--martin/",
+      about:
+        "Alicia is a front-end developer with a background in biomedical science."
     },
     {
       name: "Christian",
-      linkedIn: "",
-      about: "",
+      linkedIn: "qqqqqqqq",
+      about: "wwwwwwwwwww"
     },
     {
       name: "Liam",
-      linkedIn: "",
-      about: "",
+      linkedIn: "aaaaaaaaaaaaa",
+      about: "zzzzzzzzzzzzz"
     },
     {
       name: "Rion",
-      linkedIn: "",
-      about: "",
+      linkedIn: "rrrrrrrrrrrrrr",
+      about: "ooooooooooooo"
     }
-  ]
+  ];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

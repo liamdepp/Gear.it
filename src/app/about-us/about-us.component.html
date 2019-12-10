@@ -1,6 +1,14 @@
-<p>about-us works!</p>
-<ul>
-  <li ngModel *ngFor = "let profile of profiles">
-    {{profile.name}}
-  </li>
-</ul>
+<html>
+  <h1>About Us</h1>
+  <ul>
+    <li *ngFor="let profile of profiles">
+      <div class="name">
+        {{ profile.name }}
+      </div>
+      <div class="linkedIn">
+        {{ profile.linkedIn }}
+      </div>
+      <div>{{ profile.about }}</div>
+    </li>
+  </ul>
+</html>
