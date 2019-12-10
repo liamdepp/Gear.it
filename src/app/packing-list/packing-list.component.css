@@ -50,6 +50,7 @@ li {
   background-color: #f0e0bf;
   color: #5a8462;
   float: right;
+  cursor: pointer;
 }
 
 .addButton {
@@ -81,6 +82,7 @@ input {
   background-color: #f0e0bf;
   padding: 0px;
   color: rgb(90, 90, 90);
+  cursor: pointer;
 }
 
 .box:hover {
@@ -93,6 +95,7 @@ input {
   background-color: #f0e0bf;
   padding: 0px;
   color: rgb(90, 90, 90);
+  cursor: pointer;
 }
 
 .delete:hover {
@@ -108,4 +111,5 @@ input {
   background-color: #f0e0bf;
   color: #5a8462;
   padding: 0px;
+  cursor: pointer;
 }

@@ -28,7 +28,7 @@ export class PackingListComponent implements OnInit {
   }
 
   completeItem(item: PackingList): void {
-    item.complete = true;
+    item.complete = !item.complete;
   }
 
   delete(item: PackingList): void {
