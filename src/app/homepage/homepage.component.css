@@ -33,6 +33,7 @@ h1 {
   border-radius: 10px;
   background-color: #ff6800;
   color: white;
+  cursor: pointer;
 }
 .overlay {
   position: relative;

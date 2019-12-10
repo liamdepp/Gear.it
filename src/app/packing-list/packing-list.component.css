@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+
+h1 {
+  font-family: "Permanent Marker";
+  margin: 8px;
+}
+
+.listArea {
+  background-color: #f0e0bf;
+  text-indent: 50px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.425);
+  width: 60%;
+  height: auto;
+  position: relative;
+  color: rgb(90, 90, 90);
+  margin: auto;
+}
+
+html,
+body {
+  background-color: #5a8462;
+}
+
+body {
+  padding-top: 60px;
+}
+
+.list {
+  color: rgb(90, 90, 90);
+  list-style: none;
+  padding: 0px;
+}
+
+li {
+  border-top: 1px solid rgb(182, 180, 180);
+  padding: 10px;
+}
+
+.listArea::before {
+  content: "";
+  position: absolute;
+  left: 45px;
+  height: 100%;
+  width: 2px;
+  background: rgba(255, 0, 0, 0.4);
+}
+
+.add {
+  border: none;
+  background-color: #f0e0bf;
+  color: #5a8462;
+  float: right;
+}
+
+.addButton {
+  position: relative;
+  bottom: 2px;
+}
+
+.add:hover {
+  color: rgb(90, 90, 90);
+}
+
+form {
+  display: inline-flex;
+  width: 100%;
+}
+
+input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-left: 55px;
+  margin-bottom: 10px;
+}
+
+.box {
+  float: left;
+  border: none;
+  background-color: #f0e0bf;
+  padding: 0px;
+  color: rgb(90, 90, 90);
+}
+
+.box:hover {
+  color: #5a8462;
+}
+
+.delete {
+  float: right;
+  border: none;
+  background-color: #f0e0bf;
+  padding: 0px;
+  color: rgb(90, 90, 90);
+}
+
+.delete:hover {
+  color: #5a8462;
+}
+
+.completeItem {
+  text-decoration: line-through;
+}
+.check {
+  float: left;
+  border: none;
+  background-color: #f0e0bf;
+  color: #5a8462;
+  padding: 0px;
+}
