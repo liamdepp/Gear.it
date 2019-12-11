@@ -9,7 +9,7 @@
       />
       <div class="select-container">
         <div class="selectdiv material-icons">
-          <select>
+          <select name="activity">
             <option selected> Select an activity </option>
             <option>Camping/Hiking</option>
             <option>Urban Travel</option>
@@ -19,13 +19,22 @@
         </div>
       </div>
       <button class="submit-form">Submit</button>
-    </form> 
+    </form>
   </div>
 </div>
 <div class="results-container">
   <div class="gear-results">
     <div *ngFor="let gear of gearMens; index as i">
-      <div>{{ gear.na</div>
+      <div class="mens-gear">
+        <h2>{{ gear.title }}</h2>
+      </div>
+      <div><img src="/assets/gear-images/{{ gear.image }}" alt="" /></div>
+    </div>
+    <div *ngFor="let gear of gearWomens; index as i">
+      <div class="womens-gear">
+        <h2>{{ gear.title }}</h2>
+      </div>
+      <div><img src="/assets/gear-images/{{ gear.image }}" alt="" /></div>
     </div>
   </div>
 </div>

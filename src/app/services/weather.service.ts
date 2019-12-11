@@ -15,9 +15,18 @@ export class WeatherService {
     return this.http.get("http://api.openweathermap.org/data/2.5/weather/", {
       params: {
         appid: API_KEY,
-        q: q, 
-        units: "imperial",
+        q: q,
+        units: "imperial"
       }
-    }); 
+    });
+  }
+  getLocalWeather(location: string): Observable<any> {
+    return this.http.get("http://api.openweathermap.org/data/2.5/weather/", {
+      params: {
+        appid: API_KEY,
+        q: location,
+        units: "imperial"
+      }
+    });
   }
 }
