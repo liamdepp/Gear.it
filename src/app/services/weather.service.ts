@@ -12,7 +12,7 @@ const q = "Detroit";
 export class WeatherService {
   constructor(private http: HttpClient) {}
   getWeather(): Observable<any> {
-    return this.http.get("http://api.openweathermap.org/data/2.5/weather/", {
+    return this.http.get("http://api.openweathermap.org/data/2.5/weather/?", {
       params: {
         appid: API_KEY,
         q: q,
@@ -21,7 +21,7 @@ export class WeatherService {
     });
   }
   getLocalWeather(location: string): Observable<any> {
-    return this.http.get("http://api.openweathermap.org/data/2.5/weather/", {
+    return this.http.get("http://api.openweathermap.org/data/2.5/weather/?", {
       params: {
         appid: API_KEY,
         q: location,

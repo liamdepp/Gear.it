@@ -88,3 +88,6 @@ input::placeholder {
   background-color: #F4FFF7;
   cursor: pointer;
 }
+a {
+  cursor: pointer;
+}

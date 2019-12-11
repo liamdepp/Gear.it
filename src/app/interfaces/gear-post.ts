@@ -1,6 +1,7 @@
 export interface GearPost {
   activity: string;
-  tempRange: number[];
+  tempRangeLow: number;
+  tempRangeHigh:number;
   image: string;
   title: string;
   description: string;
