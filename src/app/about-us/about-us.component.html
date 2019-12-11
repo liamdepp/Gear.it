@@ -1,14 +1,13 @@
-<html>
-  <h1>About Us</h1>
-  <ul>
-    <li *ngFor="let profile of profiles">
-      <div class="name">
-        {{ profile.name }}
+<body>
+  <div class="hContainer"><h1>About Us</h1></div>
+  <div class="profile" *ngFor="let pictures of profiles; index as i">
+    <div class="one">
+      <img (click)="displayInfo(i)" src="{{ pictures.profilePic }}" />
+      <div class="info" *ngIf="index === i">
+        <h1>{{ pictures.name }}</h1>
+        <p>{{ pictures.about }}</p>
+        <p>{{ pictures.linkedIn }}</p>
       </div>
-      <div class="linkedIn">
-        {{ profile.linkedIn }}
-      </div>
-      <div>{{ profile.about }}</div>
-    </li>
-  </ul>
-</html>
+    </div>
+  </div>
+</body>

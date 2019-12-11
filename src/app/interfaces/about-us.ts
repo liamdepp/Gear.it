@@ -1,6 +1,6 @@
 export interface AboutUs {
-  name: string,
-  linkedIn: string,
-  about: string,
-  
+  name: string;
+  profilePic: any;
+  linkedIn: string;
+  about: string;
 }

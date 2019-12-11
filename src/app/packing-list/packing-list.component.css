@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
 
-h1 {
-  font-family: "Permanent Marker";
-  margin: 8px;
+.hContainer h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #5a8462;
 }
 
 .listArea {
@@ -13,7 +16,9 @@ h1 {
   height: auto;
   position: relative;
   color: rgb(90, 90, 90);
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
 
 html,
@@ -59,7 +64,7 @@ li {
 }
 
 .add:hover {
-  color: rgb(90, 90, 90);
+  color: #ff6800;
 }
 
 form {
@@ -81,7 +86,7 @@ input {
   border: none;
   background-color: #f0e0bf;
   padding: 0px;
-  color: rgb(90, 90, 90);
+  color: #18331d;
   cursor: pointer;
 }
 
@@ -94,12 +99,12 @@ input {
   border: none;
   background-color: #f0e0bf;
   padding: 0px;
-  color: rgb(90, 90, 90);
+  color: #18331d;
   cursor: pointer;
 }
 
 .delete:hover {
-  color: #5a8462;
+  color: #ff6800;
 }
 
 .completeItem {
@@ -109,7 +114,7 @@ input {
   float: left;
   border: none;
   background-color: #f0e0bf;
-  color: #5a8462;
+  color: #ff6800;
   padding: 0px;
   cursor: pointer;
 }
