@@ -1,10 +1,9 @@
-
 .form-container {
   display: flex;
   flex-direction: column;
 }
 
-form{
+form {
   width: 50%;
   padding: 50px 50px;
   margin-left: auto;
@@ -14,8 +13,8 @@ form{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(24,51,29,0.7);
-  color: #F4FFF7;
+  background-color: rgba(24, 51, 29, 0.7);
+  color: #f4fff7;
   justify-content: center;
   margin-top: 15%;
   border-radius: 5px;
@@ -25,9 +24,9 @@ input {
   min-width: 200px;
   width: 100%;
   text-align: center;
-  background-color: #F4FFF7;
+  background-color: #f4fff7;
   padding: 10px;
-  border: 1px solid #B1B2B5;
+  border: 1px solid #b1b2b5;
   border-radius: 5px;
   font-size: 14px;
   margin-bottom: 10px;
@@ -54,13 +53,13 @@ input::placeholder {
   font-family: "Material Icons";
   content: "code";
   font: 17px;
-  color: #5A8462;
+  color: #5a8462;
   transform: rotate(90deg);
   right: 11px;
   /*Adjust for position however you want*/
   top: 18px;
   padding: 0 0 2px;
-  border-bottom: 1px solid #5A8462;  
+  border-bottom: 1px solid #5a8462;
   position: absolute;
   pointer-events: none;
 }
@@ -77,7 +76,7 @@ input::placeholder {
   font-size: 16px;
   line-height: 1.75;
   color: black;
-  background-color: #f4FFF7;
+  background-color: #f4fff7;
   border: 1px solid #cccccc;
   word-break: normal;
   cursor: pointer;
@@ -85,9 +84,40 @@ input::placeholder {
 
 .submit-form {
   padding: 10px 30px;
-  background-color: #F4FFF7;
+  background-color: #f4fff7;
   cursor: pointer;
+  border-radius: 5px;
 }
 a {
   cursor: pointer;
+}
+
+.results-container {
+  background-color: #5a8462;
+}
+
+.things {
+  background-color: white;
+  width: 300px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+img {
+  margin: auto;
+  width: 300px;
+}
+
+.stuff {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+}
+
+.a {
+  color: white;
+  font-size: 20px;
+}
+a {
+  margin: 5px;
 }
