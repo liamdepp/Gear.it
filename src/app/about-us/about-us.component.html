@@ -1,12 +1,14 @@
 <body>
   <div class="hContainer"><h1>About Us</h1></div>
-  <div class="profile" *ngFor="let pictures of profiles; index as i">
-    <div class="one">
-      <img (click)="displayInfo(i)" src="{{ pictures.profilePic }}" />
-      <div class="info" *ngIf="index === i">
-        <h1>{{ pictures.name }}</h1>
-        <p>{{ pictures.about }}</p>
-        <p>{{ pictures.linkedIn }}</p>
+  <div class="container">
+    <div class="profile" *ngFor="let pictures of profiles; index as i">
+      <div class="one">
+        <img (click)="displayInfo(i)" src="{{ pictures.profilePic }}" />
+        <div class="info" *ngIf="index === i">
+          <h1>{{ pictures.name }}</h1>
+          <p>{{ pictures.about }}</p>
+          <p>{{ pictures.linkedIn }}</p>
+        </div>
       </div>
     </div>
   </div>
