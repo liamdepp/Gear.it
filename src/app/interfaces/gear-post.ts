@@ -8,5 +8,4 @@ export interface GearPost {
   title: string;
   description: string;
   display: boolean;
-  packingName: PackingList;
 }

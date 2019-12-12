@@ -9,7 +9,6 @@ import { PackingListComponent } from "./packing-list/packing-list.component";
 import { HomepageComponent } from "./homepage/homepage.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { GearFormComponent } from "./gear-form/gear-form.component";
-import { EnterComponent } from './enter/enter.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +17,7 @@ import { EnterComponent } from './enter/enter.component';
     PackingListComponent,
     HomepageComponent,
     AboutUsComponent,
-    GearFormComponent,
-    EnterComponent
+    GearFormComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
