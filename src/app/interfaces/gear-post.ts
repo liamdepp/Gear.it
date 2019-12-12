@@ -1,3 +1,5 @@
+import { PackingList } from './packing-list';
+
 export interface GearPost {
   activity: string;
   tempRangeLow: number;
@@ -6,4 +8,5 @@ export interface GearPost {
   title: string;
   description: string;
   display: boolean;
+  packingName: PackingList;
 }

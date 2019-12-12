@@ -4,12 +4,12 @@
     <div class="listArea">
       <div class="hContainer"><h1>Packing List</h1></div>
       <ul class="list">
-        <p *ngIf="listItems.length === 0">Your list is empty!</p>
-        <li *ngFor="let item of listItems">
+        <p *ngIf="packingList.length === 0">Your list is empty!</p>
+        <li *ngFor="let item of packingList">
           <button
             class="box"
             *ngIf="!item.complete"
-            (click)="completeItem(item)"
+            (click)="checkItem(item)"
           >
             <i class="material-icons">
               check_box_outline_blank
@@ -21,32 +21,33 @@
           <button
             class="check"
             *ngIf="item.complete"
-            (click)="completeItem(item)"
+            (click)="checkItem(item)"
           >
             <i class="material-icons">
               check_box
             </i>
           </button>
-          <button class="delete" (click)="delete(item)">
+          <button class="delete" (click)="removeItem(item)">
             <i class="material-icons">
               delete
             </i>
           </button>
         </li>
       </ul>
-      <form (ngSubmit)="addItem()">
+      <form (ngSubmit)="addToList()">
         <input
           type="text"
           name="add"
           placeholder="Add an item"
-          [(ngModel)]="newItemText"
+          [(ngModel)]="newItemString"
           required
+          
         />
         <div class="addButton">
           <button
             class="add"
             type="submit"
-            [disabled]="newItemText.length === 0"
+            [disabled]="newItemString.length === 0"
           >
             <i class="material-icons" style="font-size: 35px">
               add_box

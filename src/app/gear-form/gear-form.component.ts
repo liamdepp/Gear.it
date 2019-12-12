@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { GearPost } from "../interfaces/gear-post";
 import { NgForm } from "@angular/forms";
 import { WeatherService } from "../services/weather.service";
+import { PackingListService } from '../services/packing-list.service';
 
 @Component({
   selector: "app-gear-form",
@@ -12,6 +13,8 @@ import { WeatherService } from "../services/weather.service";
 export class GearFormComponent implements OnInit {
   localWeather: number; 
   localActivity: string;
+  localLocation: string;
+  localCountry: string;
   shownGearMens: GearPost[] = [];
   shownGearWomens: GearPost[] = [];
   mensDisplay: boolean = true;
@@ -24,7 +27,11 @@ export class GearFormComponent implements OnInit {
       title: "Heavy Insulated Jacket",
       description:
         "Proper insulation is critical in colder climates. The more loft a jacket has, the more trapped air it can hold retaining the heat your body generates. Most down and synthetic options will feature a water-resistant exterior.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Heavy Insulated Jacket",
+        complete: false
+      }
     },
     {
       activity: "Camp-Hike",
@@ -34,7 +41,11 @@ export class GearFormComponent implements OnInit {
       title: "Midlayer",
       description:
         "A midlayer provides extra insulation that can be easily layered for added warmth. Look for ones with a deep zipper to allow venting for added breathability. Fleece or Merino Wool make excellent choices.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Midlayer Sweater",
+        complete: false
+      }
     },
     {
       activity: "Camp-Hike",
@@ -44,7 +55,11 @@ export class GearFormComponent implements OnInit {
       title: "Baselayer",
       description:
         "Keeping your core warm while moving moisture away from your skin. Baselayers are your essential next-to-skin layer that keep you comfortable and dry.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Baselayer Shirt",
+        complete: false
+      }
     },
     {
       activity: "Camp-Hike",
@@ -54,7 +69,11 @@ export class GearFormComponent implements OnInit {
       title: "Hiking Socks",
       description:
         "Keep your feet comfortable and dry while on the move. The heavier the cushion of the sock, the more moisture it can absorb. Merino wool is naturally antimicrobial allowing you to wear them multiple times without having to wash. Just make sure to rotate the pair that you wear each day.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Hiking Socks",
+        complete: false
+      }
     },
     {
       activity: "Camp-Hike",
@@ -64,7 +83,11 @@ export class GearFormComponent implements OnInit {
       title: "Fast Drying Underwear",
       description:
         "Don't leave home with out it. Synthetic or Merino Wool underwear are not only easy to wash by hand, but also take up much less space than traditional cotton underwear when traveling.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Fast Drying Underwear",
+        complete: false
+      }
     },
     {
       activity: "Camp-Hike",
@@ -74,7 +97,11 @@ export class GearFormComponent implements OnInit {
       title: "Hiking Boots",
       description:
         "Properly sized boots will give you the support and traction you need while out on the trail. Start to wear them a few weeks before your trip to make sure your feet are used to wearing them.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Hiking Boots",
+        complete: false
+      }
     },
 
     {
@@ -85,7 +112,11 @@ export class GearFormComponent implements OnInit {
       title: "Waterproof Shell",
       description:
         "Worn as your outermost layer, a waterproof - windproof shell helps keep the elements out while keeping you dry.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Waterproof Jacket",
+        complete: false
+      }
     },
     {
       activity: "Urban Travel",
@@ -95,7 +126,11 @@ export class GearFormComponent implements OnInit {
       title: "Lightweight Travel Shirt",
       description:
         "Made of synthetic or merino wool, these shirts can replace the traditional button down shirt working for both formal and casual events when out.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Travel Shirt",
+        complete: false
+      }
     },
     {
       activity: "Urban Travel",
@@ -105,7 +140,11 @@ export class GearFormComponent implements OnInit {
       title: "Sofshell Pants",
       description:
         "The look and cut of your favorite jeans without the weight. The added comfort and versatility of stretch and water-repellency make these a perfect choice for exploring the city.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Softshell Pants",
+        complete: false
+      }
     },
     {
       activity: "Urban Travel",
@@ -115,7 +154,11 @@ export class GearFormComponent implements OnInit {
       title: "Medium Cushion Socks",
       description:
         "Medium cushion socks provide an added layer of cushion especially for walking around city streets. Merino wool is naturally antimicrobial allowing you to wear them multiple times without having to wash. Just make sure to rotate the pair that you wear each day.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Cushioned Socks",
+        complete: false
+      }
     },
     {
       activity: "Urban Travel",
@@ -125,7 +168,11 @@ export class GearFormComponent implements OnInit {
       title: "Fast Drying Underwear",
       description:
         "Don't leave home with out it. Synthetic or Merino Wool underwear are not only easy to wash by hand, but also take up much less space than traditional cotton underwear when traveling.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Fast Drying Underwear",
+        complete: false
+      }
     }
   ];
 
@@ -138,7 +185,11 @@ export class GearFormComponent implements OnInit {
       title: "Heavy Insulated Jacket",
       description:
         "Proper insulation is critical in colder climates. The more loft a jacket has, the more trapped air it can hold retaining your body heat. Most down and synthetic options will feature a water-resistant exterior.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Heavy Insulated Jacket",
+        complete: false
+      }
     },
     {
       activity: "Camp-Hike",
@@ -148,7 +199,11 @@ export class GearFormComponent implements OnInit {
       title: "Midlayer",
       description:
         "A midlayer provides extra insulation that can be easily layered for added warmth. Look for ones with a deep zipper to allow venting for added breathability. Fleece or Merino Wool make excellent choices.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Midlayer Sweater",
+        complete: false
+      }
     },
     {
       activity: "Camp-Hike",
@@ -158,7 +213,11 @@ export class GearFormComponent implements OnInit {
       title: "Baselayer",
       description:
         "Keeping your core warm while moving moisture away from your skin. Baselayers are your essential next-to-skin layer that keep you comfortable and dry.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Baselayer Shirt",
+        complete: false
+      }
     },
     {
       activity: "Camp-Hike",
@@ -168,7 +227,11 @@ export class GearFormComponent implements OnInit {
       title: "Hiking Socks",
       description:
         "Keep your feet comfortable and dry while on the move. The heavier the cushion of the sock, the more moisture it can absorb. Merino wool is naturally antimicrobial allowing you to wear them multiple times without having to wash. Just make sure to rotate the pair that you wear each day.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Hiking Socks",
+        complete: false
+      }
     },
     {
       activity: "Camp-Hike",
@@ -178,7 +241,11 @@ export class GearFormComponent implements OnInit {
       title: "Fast Drying Underwear",
       description:
         "Don't leave home with out it. Synthetic or Merino Wool underwear are not only easy to wash by hand, but also take up much less space than traditional cotton underwear when traveling.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Fast Drying Underwear",
+        complete: false
+      }
     },
     {
       activity: "Camp-Hike",
@@ -188,7 +255,11 @@ export class GearFormComponent implements OnInit {
       title: "Hiking Boots",
       description:
         "Properly sized boots will give you the support and traction you need while out on the trail. Start to wear them a few weeks before your trip to make sure your feet are used to wearing them.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Hiking Boots",
+        complete: false
+      }
     },
 
     {
@@ -199,7 +270,11 @@ export class GearFormComponent implements OnInit {
       title: "Waterproof Shell",
       description:
         "Worn as your outermost layer, a waterproof - windproof shell helps keep the elements out while keeping you dry.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Waterproof Shell",
+        complete: false
+      }
     },
     {
       activity: "Urban Travel",
@@ -209,7 +284,11 @@ export class GearFormComponent implements OnInit {
       title: "Sofshell Pants",
       description:
         "The look and cut of your favorite jeans without the weight. The added comfort and versatility of stretch and water-repellency make these a perfect choice for exploring the city.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Softshell Pants",
+        complete: false
+      }
     },
     {
       activity: "Urban Travel",
@@ -219,17 +298,23 @@ export class GearFormComponent implements OnInit {
       title: "Medium Cushion Socks",
       description:
         "Medium cushion socks provide an added layer of cushion especially for walking around city streets. Merino wool is naturally antimicrobial allowing you to wear them multiple times without having to wash. Just make sure to rotate the pair that you wear each day.",
-      display: true
+      display: true,
+      packingName: {
+        item: "Cushioned Socks",
+        complete: false
+      }
     }
   ];
 
-  constructor(private router: Router, private weatherService: WeatherService) {}
+  constructor(private router: Router, private weatherService: WeatherService, private packingListService: PackingListService) {}
 
   submitGearFormWeather(form: NgForm) {
     let activity = form.value.activity;
     let location = form.value.location;
     this.weatherService.getLocalWeather(location).subscribe(data => {
       this.localWeather = data.main.temp;
+      this.localLocation = data.name;
+      this.localCountry = data.sys.country;
       console.log(this.localWeather);
       this.pushDesiredGearMen();
       this.pushDesiredGearWomen();
@@ -262,6 +347,15 @@ export class GearFormComponent implements OnInit {
 
   setMens(){
     this.mensDisplay = true;
+  }
+
+  addToPackingList(item) {
+    for(let gear of this.gearMens){
+      if(gear === item){
+        this.packingListService.setCustomWords(gear.title);
+        this.packingListService.addItem();
+      }
+    }
   }
 
   ngOnInit() {}

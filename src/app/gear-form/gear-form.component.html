@@ -11,7 +11,7 @@
       <div class="select-container">
         <div class="selectdiv material-icons">
           <select ngModel name="activity" >
-            <option selected> Select an activity </option>
+            <option value="Null" selected> Select an activity </option>
             <option value="Camp-Hike">Camping/Hiking</option>
             <option value="Urban Travel">Urban Travel</option>
             <option value="summer">Summer Sports</option>
@@ -24,7 +24,8 @@
   </div>
 </div>
 <div class="results-container">
-  <a (click)="setMens()">Mens</a>|<a (click)="setWomens()">Womens</a>
+  <p>Custom gear for {{localLocation}}, {{localCountry}}</p>
+  <a (click)="setMens()" class="gender">Mens</a>|<a (click)="setWomens()" class="gender">Womens</a>
   <div class="gear-results">
     <div *ngIf="mensDisplay === true">
       <div *ngFor="let gear of shownGearMens; index as i">
@@ -32,6 +33,7 @@
           <h2>{{ gear.title }}</h2>
         </div>
         <div><img src="/assets/gear-images/{{ gear.image }}" alt="" /></div>
+        <a class="add-to" (click)="addToPackingList(gear)" >Add to Packing List</a>
       </div>
     </div>
       <div *ngIf="mensDisplay === false">
@@ -40,6 +42,7 @@
             <h2>{{ gear.title }}</h2>
           </div>
           <div><img src="/assets/gear-images/{{ gear.image }}" alt="" /></div>
+          <a class="add-to">Add to Packing List</a>
         </div>
       </div>
   </div>

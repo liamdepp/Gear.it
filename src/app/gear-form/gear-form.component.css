@@ -81,6 +81,7 @@ input::placeholder {
   border: 1px solid #cccccc;
   word-break: normal;
   cursor: pointer;
+  content: "Select an Activity";
 }
 
 .submit-form {
@@ -88,6 +89,16 @@ input::placeholder {
   background-color: #F4FFF7;
   cursor: pointer;
 }
-a {
+.gender {
   cursor: pointer;
+}
+
+.add-to {
+  cursor: pointer;
+  border: 1px solid #FF6800;
+  background-color: #FF6800;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
 }
