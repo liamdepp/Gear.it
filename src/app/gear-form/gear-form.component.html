@@ -33,20 +33,30 @@
         <div class="mens-gear">
           <h2>{{ gear.title }}</h2>
         </div>
-        <div><img src="/assets/gear-images/{{ gear.image }}" alt="" /></div>
-        <a class="add-to" (click)="addToPackingList(gear)" >Add to Packing List</a>
+        <div>
+          <img
+            (click)="toggleDescription(i)"
+            src="/assets/gear-images/{{ gear.image }}"
+            alt=""
+          />
+        </div>
+        <a class="add-to" (click)="addToPackingList(gear)"
+          >Add to Packing List</a
+        >
+        <div class="gear-description" *ngIf="index === i">
+          <p>{{ gear.description }}</p>
+        </div>
       </div>
     </div>
-      <div *ngIf="mensDisplay === false">
-        <div *ngFor="let gear of shownGearWomens; index as i" >
-          <div class="womens-gear">
-            <h2>{{ gear.title }}</h2>
-          </div>
-          <div><img src="/assets/gear-images/{{ gear.image }}" alt="" /></div>
-          <a class="add-to">Add to Packing List</a>
+    <div *ngIf="mensDisplay === false">
+      <div *ngFor="let gear of shownGearWomens; index as i">
+        <div class="womens-gear">
+          <h2>{{ gear.title }}</h2>
         </div>
         <div><img src="/assets/gear-images/{{ gear.image }}" alt="" /></div>
+        <a class="add-to">Add to Packing List</a>
       </div>
+      <div><img src="/assets/gear-images/{{ gear.image }}" alt="" /></div>
     </div>
-  
+  </div>
 </div>

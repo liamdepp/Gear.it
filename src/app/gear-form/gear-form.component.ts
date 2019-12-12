@@ -609,5 +609,13 @@ export class GearFormComponent implements OnInit {
     }
   }
 
+  index: number;
+  toggleDescription(index: number): void {
+    if (this.index === null) {
+      this.index = index;
+    } else {
+      this.index = null;
+    }
+  }
   ngOnInit() {}
 }

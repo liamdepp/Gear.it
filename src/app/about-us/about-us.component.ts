@@ -32,7 +32,7 @@ export class AboutUsComponent implements OnInit {
     {
       name: "Rion",
       profilePic: "/assets/rionpic.jpg",
-      linkedIn: "rrrrrrrrrrrrrr",
+      linkedIn: "linkedin.com/in/rionnunez",
       about: "ooooooooooooo"
     }
   ];
