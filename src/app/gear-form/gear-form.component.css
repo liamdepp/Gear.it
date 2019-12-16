@@ -89,6 +89,12 @@ input::placeholder {
   cursor: pointer;
   border-radius: 5px;
 }
+
+.submit-form:hover {
+  border: 2px solid #ff6800;
+  color: #ff6800;
+}
+
 .gender {
   cursor: pointer;
 }
@@ -107,6 +113,13 @@ input::placeholder {
   padding: 3px 2px;
   margin-bottom: 15px;
 }
+
+.add-to:hover {
+  background-color: rgba(24, 51, 29, 0.726);
+  border: none;
+  transition: 0.3s;
+}
+
 .results-container {
   background-color: #5a8462;
 }
@@ -116,6 +129,7 @@ input::placeholder {
   width: 300px;
   border-radius: 5px;
   margin-top: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.295);
 }
 img {
   margin: auto;
@@ -137,6 +151,19 @@ a {
   margin: 5px;
 }
 
+.a a:hover {
+  color: #18331d;
+  transition: 0.3s;
+}
+
 h2 {
+  text-align: center;
+}
+
+.displayWeather {
+  color: white;
+  margin: 5px;
+  margin-top: 10px;
+  font-size: 18px;
   text-align: center;
 }

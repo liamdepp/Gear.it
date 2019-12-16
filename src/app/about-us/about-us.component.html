@@ -3,8 +3,8 @@
   <div class="container">
     <div class="profile" *ngFor="let pictures of profiles; index as i">
       <div class="one">
-        <img (click)="displayInfo(i)" src="{{ pictures.profilePic }}" />
-        <div class="info" *ngIf="index === i">
+        <img src="{{ pictures.profilePic }}" />
+        <div class="info">
           <h1>{{ pictures.name }}</h1>
           <p>{{ pictures.about }}</p>
           <p>{{ pictures.linkedIn }}</p>
