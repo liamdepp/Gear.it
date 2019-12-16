@@ -26,7 +26,8 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+  padding: 0px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.295);
 }
 
 .one {
@@ -36,20 +37,10 @@ h1 {
 
 .profile {
   background-color: #f4fff7;
-  width: 40%;
+  width: 50%;
   margin: auto;
-  margin-right: 10px;
 }
 
-.x {
-  text-align: center;
-  position: absolute;
-  top: 8.78px;
-  left: 50.032%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background-color: rgb(0, 0, 0, 0.5);
-}
 i {
   font-size: 250px;
 }
@@ -73,6 +64,9 @@ i {
   }
   .profile {
     display: inline-block;
+    width: 30%;
+    height: 250px;
+    margin-top: 25px;
   }
   .one {
     display: inline-block;
