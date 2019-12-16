@@ -14,6 +14,8 @@
   </nav>
 </header>
 
-<router-outlet></router-outlet>
+<main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+  <router-outlet #o="outlet"></router-outlet>
+</main>
 
 <!-- <app-display-weather></app-display-weather> -->
