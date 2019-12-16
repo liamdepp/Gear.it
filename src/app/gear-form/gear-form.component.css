@@ -93,6 +93,10 @@ input::placeholder {
   cursor: pointer;
 }
 
+.set-link {
+  cursor: pointer;
+}
+
 .add-to {
   cursor: pointer;
   border: 1px solid #FF6800;
@@ -100,7 +104,8 @@ input::placeholder {
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  padding: 5px;
+  padding: 3px 2px;
+  margin-bottom: 15px;
 }
 .results-container {
   background-color: #5a8462;

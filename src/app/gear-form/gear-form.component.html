@@ -19,13 +19,13 @@
           </select>
         </div>
       </div>
-      <button class="submit-form">Submit</button>
+      <button class="submit-form" [disabled]="shownGearMens.length > 0 || shownGearWomens > 0" >Submit</button>
     </form>
   </div>
 </div>
 <div class="results-container">
   <div class="a">
-    <a (click)="setMens()">Mens</a>|<a (click)="setWomens()">Womens</a>
+    <a (click)="setMens()" class="set-link">Mens</a>|<a (click)="setWomens()" class="set-link">Womens</a>
   </div>
   <div class="gear-results">
     <div class="stuff" *ngIf="mensDisplay === true">
@@ -48,15 +48,19 @@
         </div>
       </div>
     </div>
-    <div *ngIf="mensDisplay === false">
-      <div *ngFor="let gear of shownGearWomens; index as i">
-        <div class="womens-gear">
-          <h2>{{ gear.title }}</h2>
+      <div class="stuff" *ngIf="mensDisplay === false">
+        <div class="things" *ngFor="let gear of shownGearWomens; index as i" >
+          <div class="womens-gear">
+            <h2>{{ gear.title }}</h2>
+          </div>
+          <div>
+            <img src="/assets/gear-images/{{ gear.image }}"/>
+          </div>
+          <a class="add-to">Add to Packing List</a>
         </div>
-        <div><img src="/assets/gear-images/{{ gear.image }}" alt="" /></div>
-        <a class="add-to">Add to Packing List</a>
+        <div>
+          <img src="/assets/gear-images/{{ gear.image }}"/>
+        </div>
       </div>
-      <div><img src="/assets/gear-images/{{ gear.image }}" alt="" /></div>
     </div>
-  </div>
 </div>
