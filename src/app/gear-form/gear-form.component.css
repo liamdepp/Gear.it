@@ -99,8 +99,8 @@ input::placeholder {
 
 .add-to {
   cursor: pointer;
-  border: 1px solid #FF6800;
-  background-color: #FF6800;
+  border: 1px solid #ff6800;
+  background-color: #ff6800;
   color: white;
   text-decoration: none;
   border-radius: 5px;
