@@ -25,8 +25,19 @@
 </div>
 <div class="results-container">
   <div class="a">
-    <a (click)="setMens()" class="set-link">Mens</a>|<a (click)="setWomens()" class="set-link">Womens</a>
+    <a (click)="setMens()" class="set-link">Mens</a>|<a
+      (click)="setWomens()"
+      class="set-link"
+      >Womens</a
+    >
   </div>
+  <p
+    class="displayWeather"
+    *ngIf="shownGearMens.length > 0 || shownGearWomens > 0"
+  >
+    It is {{ localWeather }} °F in {{ localLocation }},
+    {{ localCountry }}
+  </p>
   <div class="gear-results">
     <div class="stuff" *ngIf="mensDisplay === true">
       <div class="things" *ngFor="let gear of shownGearMens; index as i">
@@ -48,6 +59,7 @@
 
       </div>
     </div>
+<<<<<<< HEAD
       <div class="stuff" *ngIf="mensDisplay === false">
         <div class="things" *ngFor="let gear of shownGearWomens; index as i" >
           <div class="womens-gear">
@@ -65,7 +77,21 @@
           <a class="add-to" *ngIf="gear.display === false">Remove from Packing List</a>
 
 
+=======
+    <div class="stuff" *ngIf="mensDisplay === false">
+      <div class="things" *ngFor="let gear of shownGearWomens; index as i">
+        <div class="womens-gear">
+          <h2>{{ gear.title }}</h2>
         </div>
+        <div>
+          <img src="/assets/gear-images/{{ gear.image }}" />
+>>>>>>> 333055faf99375389512d05f1d47e1eef671d4e6
+        </div>
+        <a class="add-to">Add to Packing List</a>
+      </div>
+      <div>
+        <img src="/assets/gear-images/{{ gear.image }}" />
       </div>
     </div>
+  </div>
 </div>
