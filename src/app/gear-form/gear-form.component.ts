@@ -195,6 +195,16 @@ export class GearFormComponent implements OnInit {
     },
     {
       activity: "Urban Travel",
+      tempRangeLow: -20,
+      tempRangeHigh: 55,
+      image: "casual-waterproof-boot-his.jpg",
+      title: "Waterproof Boots",
+      description:
+        "Great for everyday with waterproof construction to keep your feet dry with enough tread and traction for walking city streets.",
+      display: true
+    },
+    {
+      activity: "Urban Travel",
       tempRangeLow: 71,
       tempRangeHigh: 120,
       image: "hiking-sandals-his.jpg",
@@ -424,6 +434,26 @@ export class GearFormComponent implements OnInit {
     {
       activity: "Urban Travel",
       tempRangeLow: -20,
+      tempRangeHigh: 32,
+      image: "casual-heavy-insulated-parka-hers.jpg",
+      title: "Heavy Insulated Parka",
+      description:
+        "Proper insulation is critical in colder climates. The more loft (puffiness) a jacket has, the more trapped air it can hold retaining the heat your body generates. Most down and synthetic options will feature a water-resistant exterior.",
+      display: true
+    },
+    {
+      activity: "Urban Travel",
+      tempRangeLow: -20,
+      tempRangeHigh: 70,
+      image: "lightweight-shirt-hers.jpg",
+      title: "Lightweight Travel Shirt",
+      description:
+        "Made of synthetic or merino wool, these shirts can replace the traditional button down shirt working for both formal and casual events when out.",
+      display: true
+    },
+    {
+      activity: "Urban Travel",
+      tempRangeLow: -20,
       tempRangeHigh: 70,
       image: "sofshell-pants-hers.jpg",
       title: "Sofshell Pants",
@@ -453,12 +483,32 @@ export class GearFormComponent implements OnInit {
     },
     {
       activity: "Urban Travel",
+      tempRangeLow: -20,
+      tempRangeHigh: 55,
+      image: "casual-waterproof-boot-hers.jpg",
+      title: "Waterproof Boots",
+      description:
+        "Great for everyday with waterproof construction to keep your feet dry with enough tread and traction for walking city streets.",
+      display: true
+    },
+    {
+      activity: "Urban Travel",
       tempRangeLow: 71,
       tempRangeHigh: 120,
       image: "hiking-sandals-hers.jpg",
       title: "Hiking Sandals",
       description:
         "Sandals with proper traction and front toe protection will keep your feet comfortable whether it's trekking city streets or the trail.",
+      display: true
+    },
+    {
+      activity: "Urban Travel",
+      tempRangeLow: -20,
+      tempRangeHigh: 120,
+      image: "underwear-hers.jpg",
+      title: "Fast Drying Underwear",
+      description:
+        "Don't leave home with out it. Synthetic or Merino Wool underwear are not only easy to wash by hand, but also take up much less space than traditional cotton underwear when traveling.",
       display: true
     },
     // Women's Summer

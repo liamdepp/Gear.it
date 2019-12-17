@@ -10,14 +10,12 @@
 
 .stuff {
   position: fixed;
-  /* border: 1px solid magenta; */
   color: white;
   height: auto;
   text-align: center;
   left: 50%;
   top: 29%;
   transform: translateX(-50%);
-  /* border: 1px solid magenta; */
   width: 80%;
 }
 
@@ -42,10 +40,12 @@ h1 {
   z-index: 999;
   background-color: white;
 }
+
 article {
   z-index: 300;
   padding-top: 10px;
 }
+
 .omsImage img {
   width: 100%;
 }
@@ -77,16 +77,13 @@ article {
   .parallax {
     min-height: 100vh;
   }
-
   .stuff {
     top: 42%;
   }
-
   .omsImage {
     display: inline-block;
     width: 100vw;
   }
-
   .omsImage img {
     display: inline-block;
     height: 100%;
@@ -95,7 +92,6 @@ article {
     display: flex;
     width: 100%;
   }
-
   .omsText p {
     width: 100%;
     padding-top: 11%;
@@ -103,7 +99,6 @@ article {
     margin-right: 30px;
     padding-bottom: 0px;
   }
-
   .overlay {
     display: flex;
     flex-direction: column;

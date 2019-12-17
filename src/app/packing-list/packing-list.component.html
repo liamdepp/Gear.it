@@ -6,11 +6,7 @@
       <ul class="list">
         <p *ngIf="packingList.length === 0">Your list is empty!</p>
         <li *ngFor="let item of packingList">
-          <button
-            class="box"
-            *ngIf="!item.complete"
-            (click)="checkItem(item)"
-          >
+          <button class="box" *ngIf="!item.complete" (click)="checkItem(item)">
             <i class="material-icons">
               check_box_outline_blank
             </i>
@@ -18,11 +14,7 @@
           <span [ngClass]="{ completeItem: item.complete }">{{
             item.item
           }}</span>
-          <button
-            class="check"
-            *ngIf="item.complete"
-            (click)="checkItem(item)"
-          >
+          <button class="check" *ngIf="item.complete" (click)="checkItem(item)">
             <i class="material-icons">
               check_box
             </i>
@@ -41,7 +33,6 @@
           placeholder="Add an item"
           [(ngModel)]="newItemString"
           required
-          
         />
         <div class="addButton">
           <button

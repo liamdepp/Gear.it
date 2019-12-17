@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import { PackingList } from "../interfaces/packing-list";
-import { Subject } from 'rxjs';
+import { Subject } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class PackingListService {
   private subject = new Subject<any>();
@@ -41,27 +41,27 @@ export class PackingListService {
   //     { item:  }
   //   ]
   // }
-setCustomWords(item){
-  this.newItemText = item;
-}
+  setCustomWords(item) {
+    this.newItemText = item;
+  }
 
-  getList(){
+  getList() {
     console.log(this.listItems);
-    return this.listItems
-    
+    return this.listItems;
   }
 
-  sendMessageAdd(){
-    this.subject.next(this.listItems.length)
-  }
-
-  sendMessageDelete(){
-    this.subject.next("subtract counter")
-  }
-
-  getMessage(){
+  sendMessageAdd() {
+    this.subject.next(this.listItems.length);
     return this.subject.asObservable();
   }
 
-  constructor() { }
+  sendMessageDelete() {
+    this.subject.next("subtract counter");
+  }
+
+  getMessage() {
+    return this.subject.asObservable();
+  }
+
+  constructor() {}
 }
