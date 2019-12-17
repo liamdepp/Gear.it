@@ -609,6 +609,8 @@ export class GearFormComponent implements OnInit {
       this.localLocation = data.name;
       this.localCountry = data.sys.country;
       console.log(this.localWeather);
+      this.shownGearMens = [];
+      this.shownGearWomens= [];
       this.pushDesiredGearMen();
       this.pushDesiredGearWomen();
     });
@@ -655,6 +657,7 @@ export class GearFormComponent implements OnInit {
       if (gear === item) {
         this.packingListService.setCustomWords(gear.title);
         this.packingListService.addItem();
+        gear.display === false;
       }
     }
   }

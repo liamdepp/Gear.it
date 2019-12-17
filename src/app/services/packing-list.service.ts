@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import { PackingList } from "../interfaces/packing-list";
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PackingListService {
+  private subject = new Subject<any>();
   listItems: PackingList[] = [
     { item: "Toiletries", complete: false },
     { item: "Wallet/ID", complete: false },
     { item: "Phone Charger", complete: false }
   ];
+  added: boolean = false;
 
   newItem: PackingList = { item: "", complete: false };
   newItemText: string = "";
@@ -19,7 +22,7 @@ export class PackingListService {
       ...this.listItems,
       { item: this.newItemText, complete: false }
     ];
-    console.log(this.listItems);
+    this.sendMessageAdd();
   }
 
   completeItem(item: PackingList): void {
@@ -29,6 +32,7 @@ export class PackingListService {
   delete(item: PackingList): void {
     this.listItems = this.listItems.filter(x => x !== item);
     console.log(this.listItems);
+    this.sendMessageAdd();
   }
 
   // addItemFromGear(item){
@@ -45,6 +49,18 @@ setCustomWords(item){
     console.log(this.listItems);
     return this.listItems
     
+  }
+
+  sendMessageAdd(){
+    this.subject.next(this.listItems.length)
+  }
+
+  sendMessageDelete(){
+    this.subject.next("subtract counter")
+  }
+
+  getMessage(){
+    return this.subject.asObservable();
   }
 
   constructor() { }

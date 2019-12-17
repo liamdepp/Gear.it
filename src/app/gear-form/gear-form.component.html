@@ -14,38 +14,49 @@
             <option selected> Select an activity </option>
             <option value="Camp-Hike">Camping/Hiking</option>
             <option value="Urban Travel">Urban Travel</option>
-            <option value="summer">Summer Sports</option>
-            <option value="winter">Winter Sports</option>
+            <option value="Summer">Summer Sports</option>
+            <option value="Winter">Winter Sports</option>
           </select>
         </div>
       </div>
-      <button class="submit-form" [disabled]="shownGearMens.length > 0 || shownGearWomens > 0" >Submit</button>
+      <button class="submit-form">Submit</button>
     </form>
   </div>
 </div>
 <div class="results-container">
   <div class="a">
-    <a (click)="setMens()" class="set-link">Mens</a>|<a (click)="setWomens()" class="set-link">Womens</a>
+    <a (click)="setMens()" class="set-link">Mens</a>|<a
+      (click)="setWomens()"
+      class="set-link"
+      >Womens</a
+    >
   </div>
+  <p
+    class="displayWeather"
+    *ngIf="shownGearMens.length > 0 || shownGearWomens > 0"
+  >
+    It is {{ localWeather }} °F in {{ localLocation }},
+    {{ localCountry }}
+  </p>
   <div class="gear-results">
     <div class="stuff" *ngIf="mensDisplay === true">
       <div class="things" *ngFor="let gear of shownGearMens; index as i">
         <div class="mens-gear">
           <h2>{{ gear.title }}</h2>
         </div>
-        <div>
+        <div class="image-description">
           <img
             (click)="toggleDescription(i)"
             src="/assets/gear-images/{{ gear.image }}"
             alt=""
           />
+          <p class="gear-description" *ngIf="index === i">{{ gear.description }}</p>
         </div>
         <a class="add-to" (click)="addToPackingList(gear)"
-          >Add to Packing List</a
-        >
-        <div class="gear-description" *ngIf="index === i">
-          <p>{{ gear.description }}</p>
-        </div>
+          >Add to Packing List
+        </a>
+        <a class="add-to" *ngIf="gear.display === false">Remove from Packing List</a>
+
       </div>
     </div>
       <div class="stuff" *ngIf="mensDisplay === false">
@@ -53,14 +64,17 @@
           <div class="womens-gear">
             <h2>{{ gear.title }}</h2>
           </div>
-          <div>
-            <img src="/assets/gear-images/{{ gear.image }}"/>
+          <div class="image-description">
+            <img
+              (click)="toggleDescription(i)"
+              src="/assets/gear-images/{{ gear.image }}"
+              alt=""
+            />
+            <p class="gear-description" *ngIf="index === i">{{ gear.description }}</p>
           </div>
-          <a class="add-to">Add to Packing List</a>
+          <a class="add-to" (click)="addToPackingList(gear)" *ngIf="gear.display">Add to Packing List</a>
+          <a class="add-to" *ngIf="gear.display === false">Remove from Packing List</a>
         </div>
-        <div>
-          <img src="/assets/gear-images/{{ gear.image }}"/>
-        </div>
-      </div>
     </div>
+  </div>
 </div>

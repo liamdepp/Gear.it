@@ -89,6 +89,12 @@ input::placeholder {
   cursor: pointer;
   border-radius: 5px;
 }
+
+.submit-form:hover {
+  border: 2px solid #ff6800;
+  color: #ff6800;
+}
+
 .gender {
   cursor: pointer;
 }
@@ -105,8 +111,15 @@ input::placeholder {
   text-decoration: none;
   border-radius: 5px;
   padding: 3px 2px;
-  margin-bottom: 15px;
+  margin-top: 50px;
 }
+
+.add-to:hover {
+  background-color: rgba(24, 51, 29, 0.726);
+  border: none;
+  transition: 0.3s;
+}
+
 .results-container {
   background-color: #5a8462;
 }
@@ -116,6 +129,9 @@ input::placeholder {
   width: 300px;
   border-radius: 5px;
   margin-top: 15px;
+  height: 410px;
+  max-height: 410px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.295);
 }
 img {
   margin: auto;
@@ -137,6 +153,35 @@ a {
   margin: 5px;
 }
 
+.a a:hover {
+  color: #18331d;
+  transition: 0.3s;
+}
+
 h2 {
+  text-align: center;
+}
+
+.gear-description{
+  background-color: rgba(50,50,50,0.9);
+  color: white;
+  position: absolute;
+  width: 300px;
+  height: 250px;
+  top: 0px;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 5px;
+  font-size: 14pt;
+}
+
+.image-description{
+  position: relative;
+}
+.displayWeather {
+  color: white;
+  margin: 5px;
+  margin-top: 10px;
+  font-size: 18px;
   text-align: center;
 }
