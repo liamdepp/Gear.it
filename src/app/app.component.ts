@@ -1,9 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { PackingListService } from './services/packing-list.service';
 import { FormsModule } from '@angular/forms';
-import { fadeAnimation } from './animations'
-
-
+import { fadeAnimation } from './animations';
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -11,13 +9,9 @@ import { fadeAnimation } from './animations'
   animations: [fadeAnimation]
 })
 export class AppComponent implements OnInit {
-  
   title = "gearIt";
-
   constructor(private packingListService: PackingListService){}
-
-  counter: number = 3;
-
+  counter: number
   subscription = this.packingListService.getMessage().subscribe(counter => {
     // if (message === "add counter") {
     //   this.counter++
@@ -27,12 +21,12 @@ export class AppComponent implements OnInit {
     // }
     this.counter = counter;
   });
-
   NgOnChanges(){
   }
-
   ngOnInit(): void {
+    this.packingListService.sendMessageAdd().subscribe(counter =>{
+      this.counter = counter;
+    })
   }
-
 }
 // This.subject.next
