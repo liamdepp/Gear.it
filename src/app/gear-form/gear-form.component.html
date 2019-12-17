@@ -59,7 +59,6 @@
 
       </div>
     </div>
-<<<<<<< HEAD
       <div class="stuff" *ngIf="mensDisplay === false">
         <div class="things" *ngFor="let gear of shownGearWomens; index as i" >
           <div class="womens-gear">
@@ -75,23 +74,7 @@
           </div>
           <a class="add-to" (click)="addToPackingList(gear)" *ngIf="gear.display">Add to Packing List</a>
           <a class="add-to" *ngIf="gear.display === false">Remove from Packing List</a>
-
-
-=======
-    <div class="stuff" *ngIf="mensDisplay === false">
-      <div class="things" *ngFor="let gear of shownGearWomens; index as i">
-        <div class="womens-gear">
-          <h2>{{ gear.title }}</h2>
         </div>
-        <div>
-          <img src="/assets/gear-images/{{ gear.image }}" />
->>>>>>> 333055faf99375389512d05f1d47e1eef671d4e6
-        </div>
-        <a class="add-to">Add to Packing List</a>
-      </div>
-      <div>
-        <img src="/assets/gear-images/{{ gear.image }}" />
-      </div>
     </div>
   </div>
 </div>
