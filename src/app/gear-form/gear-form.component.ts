@@ -560,7 +560,7 @@ export class GearFormComponent implements OnInit {
       this.localCountry = data.sys.country;
       console.log(this.localWeather);
       this.shownGearMens = [];
-      this.shownGearWomens= [];
+      this.shownGearWomens = [];
       this.pushDesiredGearMen();
       this.pushDesiredGearWomen();
     });

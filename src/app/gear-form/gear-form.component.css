@@ -129,7 +129,7 @@ input::placeholder {
   width: 300px;
   border-radius: 5px;
   margin-top: 15px;
-  height: 410px;
+  height: 420px;
   max-height: 410px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.295);
 }
@@ -160,10 +160,11 @@ a {
 
 h2 {
   text-align: center;
+  margin-bottom: 5px;
 }
 
-.gear-description{
-  background-color: rgba(50,50,50,0.9);
+.gear-description {
+  background-color: rgba(50, 50, 50, 0.9);
   color: white;
   position: absolute;
   width: 300px;
@@ -175,7 +176,7 @@ h2 {
   font-size: 14pt;
 }
 
-.image-description{
+.image-description {
   position: relative;
 }
 .displayWeather {
@@ -184,4 +185,15 @@ h2 {
   margin-top: 10px;
   font-size: 18px;
   text-align: center;
+}
+
+.moreInfo {
+  padding-top: 0px;
+  cursor: pointer;
+  margin-top: 0px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.moreInfo:hover {
+  color: #ff6800;
 }
