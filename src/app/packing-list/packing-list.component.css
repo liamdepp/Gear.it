@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
-
 .hContainer h1 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 40px;
@@ -21,8 +19,7 @@
   margin-top: 20px;
 }
 
-html,
-body {
+html, body {
   background-color: #5a8462;
 }
 
@@ -110,6 +107,7 @@ input {
 .completeItem {
   text-decoration: line-through;
 }
+
 .check {
   float: left;
   border: none;
@@ -117,4 +115,25 @@ input {
   color: #ff6800;
   padding: 0px;
   cursor: pointer;
+}
+
+@media print {
+  * {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .listArea {
+    background-color: #fff;
+    color: #000000;
+    box-shadow: none;
+  }
+  .material-icons {
+    display: none;
+  }
+  input {
+    display: none;
+  }
+  .hContainer h1 {
+    color: #000000;
+  }
 }
