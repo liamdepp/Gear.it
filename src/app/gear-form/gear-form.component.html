@@ -34,7 +34,7 @@
 
   <div
     class="displayWeather"
-    *ngIf="shownGearMens.length > 0 || shownGearWomens > 0"
+    *ngIf="shownGearMens.length  || shownGearWomens.length"
   >
     <p class="weatherStuff">
       It is {{ localWeather }} °F in {{ localLocation }},
