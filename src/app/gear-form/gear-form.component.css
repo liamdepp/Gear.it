@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "iconvault";
+  src: url("/assets/ForecastFont");
+  src: url("/assets/ForecastFont/iconvault_forecastfont.eot")
+      format("embedded-opentype"),
+    url("/assets/ForecastFont/iconvault_forecastfont.woff") format("woff"),
+    url("/assets/ForecastFont/iconvault_forecastfont.ttf") format("truetype"),
+    url("/assets/ForecastFont/iconvault_forecastfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -129,7 +141,7 @@ input::placeholder {
   width: 300px;
   border-radius: 5px;
   margin-top: 15px;
-  height: 410px;
+  height: 420px;
   max-height: 410px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.295);
 }
@@ -166,6 +178,7 @@ h1 {
 
 h2 {
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .gear-description {
@@ -187,7 +200,81 @@ h2 {
 .displayWeather {
   color: white;
   margin: 5px;
-  margin-top: 10px;
+  margin-top: 0px;
+  padding-top: 0px;
   font-size: 18px;
   text-align: center;
 }
+
+.moreInfo {
+  padding-top: 0px;
+  cursor: pointer;
+  margin-top: 0px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.moreInfo:hover {
+  color: #ff6800;
+  transition: 0.3s;
+}
+.icon-sun::after {
+  content: "\f113";
+  color: rgb(255, 165, 0);
+  font-family: "iconvault";
+  font-size: 40px;
+}
+
+.icon-basecloud::after {
+  content: "\f105";
+  color: rgb(204, 204, 204);
+  font-family: "iconvault";
+  font-size: 40px;
+}
+.icon-showers::before {
+  content: "\f104";
+  color: #82b2e4;
+  font-family: "iconvault";
+  position: absolute;
+  font-size: 40px;
+}
+
+.icon-snowy::before {
+  content: "\f10b";
+  color: #82b2e4;
+  font-family: "iconvault";
+  font-size: 40px;
+  position: absolute;
+}
+
+.icon-cloud::before {
+  content: "\f106";
+  font-family: "iconvault";
+  font-size: 35px;
+  color: rgb(204, 204, 204);
+  /* position: absolute; */
+
+}
+
+.icon-sunny::after {
+  content: "\f101";
+  font-family: "iconvault";
+  font-size: 40px;
+  color: rgb(255, 165, 0);
+  position: absolute;
+}
+
+.icon-thunder::before {
+  content: "\f114";
+  font-family: "iconvault";
+  font-size: 40px;
+  color: rgb(255, 165, 0);
+  position: absolute;
+}
+
+.weatherStuff {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
