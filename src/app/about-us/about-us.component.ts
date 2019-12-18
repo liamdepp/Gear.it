@@ -21,19 +21,22 @@ export class AboutUsComponent implements OnInit {
       name: "Christian",
       profilePic: "/assets/chrispic.jpg",
       linkedIn: "qqqqqqqq",
-      about: "wwwww ww www wwwwww wwww ww wwww wwwwwww wwwwww wwww www ww www wwwwww"
+      about:
+        "wwwww ww www wwwwww wwww ww wwww wwwwwww wwwwww wwww www ww www wwwwww"
     },
     {
       name: "Liam",
       profilePic: "/assets/liampic.jpg",
       linkedIn: "aaaaaaaaaaaaa",
-      about: "zzzzzzz zzzzzzz zzzzzzz zzzzz zz zz zz zzzzzzzzzz zzzzzz zz zz zzzzz zz zzzz zz"
+      about:
+        "zzzzzzz zzzzzzz zzzzzzz zzzzz zz zz zz zzzzzzzzzz zzzzzz zz zz zzzzz zz zzzz zz"
     },
     {
       name: "Rion",
       profilePic: "/assets/rionpic.jpg",
       linkedIn: "linkedin.com/in/rionnunez",
-      about: "ooo oooo oooo o ooo oooo oooooo ooooooooo ooo oooo ooo ooooo oo"
+      about:
+        "Rion is a Front-End Developer and designer with a background in the outdoor industry."
     }
   ];
 

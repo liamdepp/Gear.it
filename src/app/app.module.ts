@@ -9,7 +9,7 @@ import { PackingListComponent } from "./packing-list/packing-list.component";
 import { HomepageComponent } from "./homepage/homepage.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { GearFormComponent } from "./gear-form/gear-form.component";
-import { SlideshowModule } from "ng-simple-slideshow";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { SlideshowModule } from "ng-simple-slideshow";
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    SlideshowModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

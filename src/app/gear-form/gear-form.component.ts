@@ -299,6 +299,26 @@ export class GearFormComponent implements OnInit {
     {
       activity: "Winter",
       tempRangeLow: -20,
+      tempRangeHigh: 55,
+      image: "baselayer-his.jpg",
+      title: "Baselayer",
+      description:
+        "Keeping your core warm while moving moisture away from your skin. Baselayers are your essential next-to-skin layer that keep you comfortable and dry.",
+      display: true
+    },
+    {
+      activity: "Winter",
+      tempRangeLow: -20,
+      tempRangeHigh: 32,
+      image: "insulated-sofshell-pants-his.jpg",
+      title: "Insulated Sofshell Pants",
+      description:
+        "Stay warm while keeping out the elements with a pair of insulated softshell pants. The stretch of the fabric allows for greater freedom of movement for more active pursuits finished with a water-repellent coating.",
+      display: true
+    },
+    {
+      activity: "Winter",
+      tempRangeLow: -20,
       tempRangeHigh: 120,
       image: "underwear-his.jpg",
       title: "Fast Drying Underwear",
@@ -586,6 +606,26 @@ export class GearFormComponent implements OnInit {
     {
       activity: "Winter",
       tempRangeLow: -20,
+      tempRangeHigh: 55,
+      image: "baselayer-hers.jpg",
+      title: "Baselayer",
+      description:
+        "Keeping your core warm while moving moisture away from your skin. Baselayers are your essential next-to-skin layer that keep you comfortable and dry.",
+      display: true
+    },
+    {
+      activity: "Winter",
+      tempRangeLow: -20,
+      tempRangeHigh: 32,
+      image: "insulated-sofshell-pants-hers.jpg",
+      title: "Insulated Sofshell Pants",
+      description:
+        "Stay warm while keeping out the elements with a pair of insulated softshell pants. The stretch of the fabric allows for greater freedom of movement for more active pursuits finished with a water-repellent coating.",
+      display: true
+    },
+    {
+      activity: "Winter",
+      tempRangeLow: -20,
       tempRangeHigh: 120,
       image: "underwear-hers.jpg",
       title: "Fast Drying Underwear",
@@ -610,7 +650,7 @@ export class GearFormComponent implements OnInit {
       this.localCountry = data.sys.country;
       console.log(this.localWeather);
       this.shownGearMens = [];
-      this.shownGearWomens= [];
+      this.shownGearWomens = [];
       this.pushDesiredGearMen();
       this.pushDesiredGearWomen();
     });

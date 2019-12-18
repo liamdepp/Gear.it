@@ -18,6 +18,11 @@ a {
   font-family: "Bebas Neue", sans-serif;
 }
 
+.logo-nav {
+  width: 35px;
+  height: auto;
+}
+
 .links a {
   color: white;
   font-size: 20px;
@@ -48,6 +53,6 @@ a {
   }
   * {
     background-color: #ffffff;
-    color: black
+    color: black;
   }
 }

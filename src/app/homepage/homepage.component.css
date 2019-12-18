@@ -1,11 +1,16 @@
 .parallax {
   background: linear-gradient(rgba(24, 51, 29, 0.8), rgba(0, 0, 0, 0)),
-    url("https://images.pexels.com/photos/450441/pexels-photo-450441.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    url("/assets/homepage-background.jpg");
   min-height: 80vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.logo-main {
+  width: 100px;
+  height: auto;
 }
 
 .stuff {
@@ -33,6 +38,13 @@ h1 {
   color: white;
   cursor: pointer;
   z-index: 0;
+}
+
+.find-gear:hover {
+  background-color: #18331d;
+  border: 3px solid #18331d;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .overlay {

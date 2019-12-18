@@ -2,20 +2,27 @@
   <nav class="navigation">
     <div routerLink="/home" class="logo">
       <img
-        src="/assets/gear-it-logo-35.png"
+        class="logo-nav"
+        src="/assets/gear-it-logo.svg"
         alt="gear-it logo that links back to homepage"
       />
     </div>
     <div class="links">
       <a routerLink="/gear-form">Find Gear</a>
-      <a  routerLink="/packing-list" >Packing List <span>({{counter}})</span></a>
+      <a routerLink="/packing-list"
+        >Packing List <span>({{ counter }})</span></a
+      >
       <a routerLink="/about-us">About Us</a>
     </div>
   </nav>
 </header>
 
-<main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+<div
+  [@routeAnimations]="
+    o && o.activatedRouteData && o.activatedRouteData['animation']
+  "
+>
   <router-outlet #o="outlet"></router-outlet>
-</main>
+</div>
 
 <!-- <app-display-weather></app-display-weather> -->
