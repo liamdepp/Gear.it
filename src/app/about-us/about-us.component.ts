@@ -27,9 +27,8 @@ export class AboutUsComponent implements OnInit {
     {
       name: "Liam D.",
       profilePic: "/assets/liampic.jpg",
-      linkedIn: "https://www.linkedin.com/in/liamdeppong/",
-      about:
-        "zzzzzzz zzzzzzz zzzzzzz zzzzz zz zz zz zzzzzzzzzz zzzzzz zz zz zzzzz zz zzzz zz"
+      linkedIn: "www.linkedin.com/in/liamdeppong",
+      about: "Liam is a former Movie theater manager turned front-end developer. Focused "
     },
     {
       name: "Rion N.",

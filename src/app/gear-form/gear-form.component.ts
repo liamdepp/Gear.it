@@ -1,9 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { Router } from "@angular/router";
 import { GearPost } from "../interfaces/gear-post";
 import { NgForm } from "@angular/forms";
 import { WeatherService } from "../services/weather.service";
 import { PackingListService } from "../services/packing-list.service";
+import { DisplayWeatherComponent } from '../display-weather/display-weather.component';
 
 @Component({
   selector: "app-gear-form",
@@ -11,6 +12,9 @@ import { PackingListService } from "../services/packing-list.service";
   styleUrls: ["./gear-form.component.css"]
 })
 export class GearFormComponent implements OnInit {
+
+
+
   localWeather: number;
   localActivity: string;
   localLocation: string;
@@ -20,6 +24,7 @@ export class GearFormComponent implements OnInit {
   shownGearMens: GearPost[] = [];
   shownGearWomens: GearPost[] = [];
   mensDisplay: boolean = true;
+  @ViewChild("resultsContainer", { static: false }) resultsContainer: ElementRef;
   gearMens: GearPost[] = [
     // Men's Camp-Hike
     {
@@ -619,9 +624,11 @@ export class GearFormComponent implements OnInit {
       this.shownGearWomens = [];
       this.pushDesiredGearMen();
       this.pushDesiredGearWomen();
+      setTimeout( () => this.scroll(), 0 );
     });
     this.localActivity = activity;
     console.log(this.localActivity);
+
   }
 
   pushDesiredGearMen(): void {
@@ -658,15 +665,21 @@ export class GearFormComponent implements OnInit {
     this.mensDisplay = true;
   }
 
-  addToPackingList(item) {
-    for (let gear of this.gearMens) {
-      if (gear === item) {
-        this.packingListService.setCustomWords(gear.title);
-        this.packingListService.addItem();
-        gear.display === false;
-      }
-    }
+  addToPackingList(gear) {
+    this.packingListService.setCustomWords(gear.title);
+    this.packingListService.addItem();
+    gear.display = !gear.display;
+    console.log(gear);
   }
+
+  removeFromPackingList(gear){
+    for(let removedItem of this.packingListService.listItems){
+        if(removedItem.item === gear.title){
+          this.packingListService.delete(removedItem);
+          gear.display = !gear.display;
+          }
+        }
+      }
 
   index: number;
   toggleDescription(index: number): void {
@@ -676,5 +689,12 @@ export class GearFormComponent implements OnInit {
       this.index = null;
     }
   }
+
+
+
+scroll(){
+  this.resultsContainer.nativeElement.scrollIntoView({behavior: 'smooth'});
+}
+
   ngOnInit() {}
 }

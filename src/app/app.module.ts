@@ -9,8 +9,9 @@ import { PackingListComponent } from "./packing-list/packing-list.component";
 import { HomepageComponent } from "./homepage/homepage.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { GearFormComponent } from "./gear-form/gear-form.component";
-import { SlideshowModule } from "ng-simple-slideshow";
+// import { SlideshowModule } from "ng-simple-slideshow";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+// import { SlideshowModule } from "ng-simple-slideshow";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,13 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     AboutUsComponent,
     GearFormComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    // SlideshowModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

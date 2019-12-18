@@ -13,12 +13,6 @@ export class AppComponent implements OnInit {
   constructor(private packingListService: PackingListService) {}
   counter: number;
   subscription = this.packingListService.getMessage().subscribe(counter => {
-    // if (message === "add counter") {
-    //   this.counter++
-    // } else if (message === "subtract counter" && this.counter > 0) {
-    //   // clear messages when empty message received
-    //   this.counter--
-    // }
     this.counter = counter;
   });
   NgOnChanges() {}
@@ -27,5 +21,5 @@ export class AppComponent implements OnInit {
       this.counter = counter;
     });
   }
+
 }
-// This.subject.next

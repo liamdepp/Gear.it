@@ -19,11 +19,11 @@
           </select>
         </div>
       </div>
-      <button class="submit-form">Submit</button>
+      <button class="submit-form"> Submit</button>
     </form>
   </div>
 </div>
-<div class="results-container">
+<div class="results-container" #resultsContainer>
   <div class="a">
     <a (click)="setMens()" class="set-link">Mens</a>|<a
       (click)="setWomens()"
@@ -66,7 +66,7 @@
 
   <div class="gear-results">
     <div class="stuff" *ngIf="mensDisplay === true">
-      <div class="things" *ngFor="let gear of shownGearMens; index as i">
+      <div  class="things" *ngFor="let gear of shownGearMens; index as i">
         <div class="mens-gear">
           <h2>{{ gear.title }}</h2>
         </div>
@@ -79,19 +79,26 @@
             {{ gear.description }}
           </p>
         </div>
+        <a class="add-to" *ngIf="gear.display" (click)="addToPackingList(gear)">Add to Packing List</a>
+        <a class="add-to" *ngIf="!gear.display" (click)="removeFromPackingList(gear)">Remove from Packing List</a>
 
-        <a class="add-to" (click)="addToPackingList(gear)"
-          >Add to Packing List
-        </a>
-        <a class="add-to" *ngIf="gear.display === false"
-          >Remove from Packing List</a
-        >
       </div>
     </div>
-    <div class="stuff" *ngIf="mensDisplay === false">
-      <div class="things" *ngFor="let gear of shownGearWomens; index as i">
-        <div class="womens-gear">
-          <h2>{{ gear.title }}</h2>
+      <div class="stuff" *ngIf="mensDisplay === false">
+        <div class="things" *ngFor="let gear of shownGearWomens; index as i" >
+          <div class="womens-gear">
+            <h2>{{ gear.title }}</h2>
+          </div>
+          <div class="image-description">
+            <img
+              (click)="toggleDescription(i)"
+              src="/assets/gear-images/{{ gear.image }}"
+              alt=""
+            />
+            <p class="gear-description" *ngIf="index === i">{{ gear.description }}</p>
+          </div>
+          <a class="add-to" (click)="addToPackingList(gear)" *ngIf="gear.display">Add to Packing List</a>
+          <a class="add-to" *ngIf="!gear.display" (click)="removeFromPackingList(gear)">Remove from Packing List</a>
         </div>
         <p class="moreInfo" (click)="toggleDescription(i)">
           More info
@@ -114,5 +121,5 @@
         >
       </div>
     </div>
-  </div>
 </div>
+
