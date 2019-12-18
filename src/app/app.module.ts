@@ -10,6 +10,7 @@ import { HomepageComponent } from "./homepage/homepage.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { GearFormComponent } from "./gear-form/gear-form.component";
 import { SlideshowModule } from "ng-simple-slideshow";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [

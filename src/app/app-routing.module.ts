@@ -9,11 +9,31 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
-  { path: "about-us", component: AboutUsComponent },
-  { path: "home", component: HomepageComponent },
-  { path: "packing-list", component: PackingListComponent },
-  { path: "display-weather", component: DisplayWeatherComponent },
-  { path: "gear-form", component: GearFormComponent }
+  {
+    path: "about-us",
+    component: AboutUsComponent,
+    data: { animation: "isRight" }
+  },
+  {
+    path: "home",
+    component: HomepageComponent,
+    data: { animation: "isRight" }
+  },
+  {
+    path: "packing-list",
+    component: PackingListComponent,
+    data: { animation: "isRight" }
+  },
+  {
+    path: "display-weather",
+    component: DisplayWeatherComponent,
+    data: { animation: "isRight" }
+  },
+  {
+    path: "gear-form",
+    component: GearFormComponent,
+    data: { animation: "isRight" }
+  }
 ];
 
 @NgModule({
