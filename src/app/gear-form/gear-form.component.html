@@ -100,25 +100,6 @@
           <a class="add-to" (click)="addToPackingList(gear)" *ngIf="gear.display">Add to Packing List</a>
           <a class="add-to" *ngIf="!gear.display" (click)="removeFromPackingList(gear)">Remove from Packing List</a>
         </div>
-        <p class="moreInfo" (click)="toggleDescription(i)">
-          More info
-        </p>
-        <div class="image-description">
-          <img
-            (click)="toggleDescription(i)"
-            src="/assets/gear-images/{{ gear.image }}"
-            alt=""
-          />
-          <p class="gear-description" *ngIf="index === i">
-            {{ gear.description }}
-          </p>
-        </div>
-        <a class="add-to" (click)="addToPackingList(gear)" *ngIf="gear.display"
-          >Add to Packing List</a
-        >
-        <a class="add-to" *ngIf="gear.display === false"
-          >Remove from Packing List</a
-        >
       </div>
     </div>
 </div>
