@@ -21,13 +21,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     AboutUsComponent,
     GearFormComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    SlideshowModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
