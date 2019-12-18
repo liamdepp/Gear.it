@@ -31,13 +31,39 @@
       >Womens</a
     >
   </div>
-  <p
+
+  <div
     class="displayWeather"
     *ngIf="shownGearMens.length > 0 || shownGearWomens > 0"
   >
-    It is {{ localWeather }} °F in {{ localLocation }},
-    {{ localCountry }}
-  </p>
+    <p class="weatherStuff">
+      It is {{ localWeather }} °F in {{ localLocation }},
+      {{ localCountry }}
+      <span *ngIf="localForcast === 'Clear'" class="icon-sun"></span>
+      <span
+        *ngIf="localForcast === 'Rain' || localForcast === 'Drizzle'"
+        class="icon-basecloud icon-showers"
+      ></span>
+      <span
+        *ngIf="localForcast === 'Snow'"
+        class="icon-basecloud icon-snowy"
+      ></span>
+      <span
+        *ngIf="localForcast === 'few clouds'"
+        class="icon-cloud icon-sunny"
+      ></span>
+      <span
+        *ngIf="localForcast === 'Clouds'"
+        class="icon-cloud"
+        id="cloud"
+      ></span>
+      <span
+        *ngIf="localForcast === 'Thunderstorm'"
+        class="icon-basecloud icon-thunder"
+      ></span>
+    </p>
+  </div>
+
   <div class="gear-results">
     <div class="stuff" *ngIf="mensDisplay === true">
       <div class="things" *ngFor="let gear of shownGearMens; index as i">

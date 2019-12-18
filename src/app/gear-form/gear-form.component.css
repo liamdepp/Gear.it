@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "iconvault";
+  src: url("/assets/ForecastFont");
+  src: url("/assets/ForecastFont/iconvault_forecastfont.eot")
+      format("embedded-opentype"),
+    url("/assets/ForecastFont/iconvault_forecastfont.woff") format("woff"),
+    url("/assets/ForecastFont/iconvault_forecastfont.ttf") format("truetype"),
+    url("/assets/ForecastFont/iconvault_forecastfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -182,7 +194,8 @@ h2 {
 .displayWeather {
   color: white;
   margin: 5px;
-  margin-top: 10px;
+  margin-top: 0px;
+  padding-top: 0px;
   font-size: 18px;
   text-align: center;
 }
@@ -196,4 +209,66 @@ h2 {
 }
 .moreInfo:hover {
   color: #ff6800;
+  transition: 0.3s;
 }
+.icon-sun::after {
+  content: "\f113";
+  color: rgb(255, 165, 0);
+  font-family: "iconvault";
+  font-size: 40px;
+}
+
+.icon-basecloud::after {
+  content: "\f105";
+  color: rgb(204, 204, 204);
+  font-family: "iconvault";
+  font-size: 40px;
+}
+.icon-showers::before {
+  content: "\f104";
+  color: #82b2e4;
+  font-family: "iconvault";
+  position: absolute;
+  font-size: 40px;
+}
+
+.icon-snowy::before {
+  content: "\f10b";
+  color: #82b2e4;
+  font-family: "iconvault";
+  font-size: 40px;
+  position: absolute;
+}
+
+.icon-cloud::before {
+  content: "\f106";
+  font-family: "iconvault";
+  font-size: 35px;
+  color: rgb(204, 204, 204);
+  /* position: absolute; */
+
+}
+
+.icon-sunny::after {
+  content: "\f101";
+  font-family: "iconvault";
+  font-size: 40px;
+  color: rgb(255, 165, 0);
+  position: absolute;
+}
+
+.icon-thunder::before {
+  content: "\f114";
+  font-family: "iconvault";
+  font-size: 40px;
+  color: rgb(255, 165, 0);
+  position: absolute;
+}
+
+.weatherStuff {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

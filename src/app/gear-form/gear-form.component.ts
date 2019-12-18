@@ -16,6 +16,7 @@ export class GearFormComponent implements OnInit {
   localLocation: string;
   localCountry: string;
   localForcast: string;
+  iconCode: string;
   shownGearMens: GearPost[] = [];
   shownGearWomens: GearPost[] = [];
   mensDisplay: boolean = true;
@@ -609,7 +610,10 @@ export class GearFormComponent implements OnInit {
       this.localWeather = data.main.temp;
       this.localLocation = data.name;
       this.localCountry = data.sys.country;
-      this.localForcast = data.weather.main;
+      this.localForcast = data.weather[0].main;
+      console.log(data.weather[0]);
+      console.log(this.localForcast);
+      this.iconCode = data.weather.icon;
       console.log(this.localWeather);
       this.shownGearMens = [];
       this.shownGearWomens = [];
